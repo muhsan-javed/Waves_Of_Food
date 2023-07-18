@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewLoginIcon"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
@@ -31,15 +31,15 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/yeonsung_regular"
         android:text="@string/waves_of_food"
         android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="@+id/imageViewLoginIcon"
+        app:layout_constraintStart_toStartOf="@+id/imageViewLoginIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLoginIcon" />
 
     <TextView
         android:id="@+id/textView7"
@@ -50,16 +50,16 @@
         android:text="@string/deliever_favorite_food"
         android:textColor="@color/textColor"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewLoginTitle"
+        app:layout_constraintStart_toStartOf="@+id/textViewLoginTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLoginTitle" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/lato_bold"
+        android:fontFamily="@font/yeonsung_regular"
         android:text="Login To Your  Account"
         android:textColor="@color/textColor"
         android:textSize="20sp"
@@ -69,9 +69,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextLoginTextEmailAddress"
         android:layout_width="337dp"
         android:layout_height="57dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/edittextshape"
         android:drawableStart="@drawable/mail_02"
@@ -82,29 +83,31 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLogin"
         app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="@+id/textViewLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLogin" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextLoginTextPassword"
         android:layout_width="337dp"
         android:layout_height="57dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/edittextshape"
         android:drawableStart="@drawable/lock"
         android:drawablePadding="15dp"
         android:elevation="5dp"
         android:ems="10"
-        android:singleLine="true"
         android:fontFamily="@font/lato_regular"
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/editTextLoginTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextLoginTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLoginTextEmailAddress" />
 
     <TextView
         android:id="@+id/textView9"
@@ -113,9 +116,9 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeonsung_regular"
         android:text="Or"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextLoginTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextLoginTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLoginTextPassword" />
 
     <TextView
         android:id="@+id/textView10"
@@ -130,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/facebookLoginButton"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -140,13 +143,13 @@
         android:paddingLeft="15dp"
         android:text="Facebook"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/googleLoginbutton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
+        android:id="@+id/googleLoginbutton"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -158,11 +161,11 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/facebookLoginButton"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
+        android:id="@+id/loginButton"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -174,18 +177,18 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/facebookLoginButton" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textViewCreateNewAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Don’t Have Account?"
         android:textColor="@color/textColor"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
