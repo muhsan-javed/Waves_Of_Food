@@ -48,4 +48,7 @@ dependencies {
     // Navigation dep
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+    // Android Image Slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
+
 }

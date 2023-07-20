@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="textColor">#53E88B</color>
+
+    <color name="startColor">#53E88B</color>
+    <color name="endColor">#15BE77</color>
 </resources>
