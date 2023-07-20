@@ -1,13 +1,8 @@
 package com.muhsanjaved.wavesoffood.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.ArrayAdapter
-import com.muhsanjaved.wavesoffood.MainActivity
-import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.databinding.ActivityChooseYourLocationBinding
 
 class ChooseYourLocationActivity : AppCompatActivity() {
