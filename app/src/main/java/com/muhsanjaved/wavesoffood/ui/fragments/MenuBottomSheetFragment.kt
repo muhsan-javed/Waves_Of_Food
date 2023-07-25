@@ -14,7 +14,6 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentMenuBottomSheetBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {

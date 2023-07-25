@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/notificationButtonImageView"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="40dp"
