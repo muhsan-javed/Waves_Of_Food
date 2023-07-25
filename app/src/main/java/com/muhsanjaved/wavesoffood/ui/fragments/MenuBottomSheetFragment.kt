@@ -33,8 +33,22 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
         }
 
         val menuFoodName =
-            listOf("Burger", "Sandwich", "momo", "Herbal Pancake", "Mixing", "Burger","Burger", "Sandwich", "momo", "Herbal Pancake", "Mixing", "Burger")
-        val menuPrice = listOf("$10", "$8", "$15", "$99", "$50", "$12","$10", "$8", "$15", "$99", "$50", "$12")
+            listOf(
+                "Burger",
+                "Sandwich",
+                "momo",
+                "Herbal Pancake",
+                "Mixing",
+                "Burger",
+                "Burger",
+                "Sandwich",
+                "momo",
+                "Herbal Pancake",
+                "Mixing",
+                "Burger"
+            )
+        val menuPrice =
+            listOf("$10", "$8", "$15", "$99", "$50", "$12", "$10", "$8", "$15", "$99", "$50", "$12")
         val menuImages = listOf(
             R.drawable.menu1,
             R.drawable.menu2,
@@ -50,7 +64,8 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
             R.drawable.menu2
         )
 
-        val adapter = MenuAdapter(ArrayList(menuFoodName), ArrayList(menuPrice), ArrayList(menuImages))
+        val adapter =
+            MenuAdapter(ArrayList(menuFoodName), ArrayList(menuPrice), ArrayList(menuImages))
         binding.menuBottomSheetRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.menuBottomSheetRecyclerView.adapter = adapter
 

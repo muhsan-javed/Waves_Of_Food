@@ -34,12 +34,17 @@ class NotificationBottomFragment : BottomSheetDialogFragment() {
 
         val notifications = listOf(
             "Your order has been Canceled Successfully",
+            "Order has been taken by the driver", "Congrats Your Order Placed",
+            "Your order has been Canceled Successfully",
             "Order has been taken by the driver", "Congrats Your Order Placed"
         )
         val notificationImages = listOf(
             R.drawable.sademoji,
             R.drawable.buss,
-            R.drawable.sucess
+            R.drawable.congratulations,
+            R.drawable.arrow_left,
+            R.drawable.lock,
+            R.drawable.congratulations
         )
         val adapter = NotificationAdapter(
             ArrayList(notifications),
