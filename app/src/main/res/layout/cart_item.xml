@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cartImageView"
+                android:layout_width="62dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/cartFoodNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Cart Food Name"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/carItemPriceTextView"
+                app:layout_constraintStart_toEndOf="@+id/cartImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/carItemPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Price"
+                android:textColor="@color/textColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cartImageView"
+                app:layout_constraintTop_toBottomOf="@+id/cartFoodNameTextView" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/minusImageButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/add_to_cart_shape"
+                android:padding="2dp"
+                android:src="@drawable/minus"
+                app:layout_constraintBottom_toBottomOf="@+id/plusImageButton"
+                app:layout_constraintEnd_toStartOf="@+id/quantityTextView"
+                app:layout_constraintTop_toTopOf="@+id/plusImageButton" />
+
+            <TextView
+                android:id="@+id/quantityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="1"
+                app:layout_constraintBottom_toBottomOf="@+id/plusImageButton"
+                app:layout_constraintEnd_toStartOf="@+id/plusImageButton"
+                app:layout_constraintTop_toTopOf="@+id/plusImageButton" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/plusImageButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/add_to_cart_shape"
+                android:padding="2dp"
+                android:src="@drawable/plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/deteleImageButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/plusImageButton"
+                app:layout_constraintStart_toStartOf="@+id/minusImageButton"
+                app:layout_constraintTop_toBottomOf="@+id/quantityTextView"
+                app:srcCompat="@drawable/trash_can" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

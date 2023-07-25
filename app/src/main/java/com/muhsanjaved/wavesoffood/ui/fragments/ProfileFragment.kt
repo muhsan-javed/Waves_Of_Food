@@ -1,4 +1,4 @@
-package com.muhsanjaved.wavesoffood.fragments
+package com.muhsanjaved.wavesoffood.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

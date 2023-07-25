@@ -1,4 +1,4 @@
-package com.muhsanjaved.wavesoffood.fragments
+package com.muhsanjaved.wavesoffood.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -32,6 +32,10 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        binding.menuItemTextView.setOnClickListener {
+            val bottomSheetDialog = MenuBottomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager,"Test")
+        }
         return binding.root
     }
 

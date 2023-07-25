@@ -1,4 +1,4 @@
-package com.muhsanjaved.wavesoffood.activities
+package com.muhsanjaved.wavesoffood.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

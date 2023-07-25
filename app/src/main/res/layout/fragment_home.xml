@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".ui.fragments.HomeFragment">
 
 
     <androidx.cardview.widget.CardView
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/menu_item_textView"
         android:layout_width="80dp"
         android:layout_height="25dp"
         android:layout_marginTop="16dp"
