@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.SearchFragment">
-
 
     <TextView
         android:id="@+id/textView14"
@@ -26,27 +24,27 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/search_shape"
-        app:queryBackground="@android:color/transparent"
-        app:iconifiedByDefault="false"
-        app:searchIcon="@drawable/search"
-        app:queryHint="What do you want to order?"
         android:focusable="false"
+        app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="What do you want to order?"
+        app:searchIcon="@drawable/search"
         tools:ignore="MissingClass" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/menuRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/menu_item"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:listitem="@layout/menu_item" />
 
     <TextView
         android:id="@+id/textView16"

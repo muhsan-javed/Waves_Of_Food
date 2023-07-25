@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.notificationButtonImageView.setOnClickListener {
             val bottomSheetDialog = NotificationBottomFragment()
-            bottomSheetDialog.show(supportFragmentManager,"Test")
+            bottomSheetDialog.show(supportFragmentManager, "Test")
         }
     }
 }

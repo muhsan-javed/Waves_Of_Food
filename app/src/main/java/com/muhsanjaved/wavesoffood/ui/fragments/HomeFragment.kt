@@ -16,7 +16,7 @@ import com.muhsanjaved.wavesoffood.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    private lateinit var binding : FragmentHomeBinding
+    private lateinit var binding: FragmentHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
 
         binding.menuItemTextView.setOnClickListener {
             val bottomSheetDialog = MenuBottomSheetFragment()
-            bottomSheetDialog.show(parentFragmentManager,"Test")
+            bottomSheetDialog.show(parentFragmentManager, "Test")
         }
         return binding.root
     }
@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
         imageSlide.setImageList(imageList)
         imageSlide.setImageList(imageList, ScaleTypes.FIT)
 
-        imageSlide.setItemClickListener(object :ItemClickListener {
+        imageSlide.setItemClickListener(object : ItemClickListener {
             override fun doubleClick(position: Int) {
                 TODO("Not yet implemented")
             }
@@ -63,10 +63,18 @@ class HomeFragment : Fragment() {
             }
         })
 
-        val foodName = listOf("Burger","Sandwich","momo", "Herbal Pancake","Mixing")
-        val Price = listOf("$10","$8","$15", "$99","$50")
-        val popularFoodImages = listOf(R.drawable.menu1,R.drawable.menu2,R.drawable.menu3,R.drawable.menu4,R.drawable.menu6)
-        val adapter = PopularAdapter(foodName,Price,popularFoodImages)
+        val foodName = listOf("Burger", "Sandwich", "momo", "Herbal Pancake", "Mixing")
+
+        val price = listOf("$10", "$8", "$15", "$99", "$50")
+
+        val popularFoodImages = listOf(
+            R.drawable.menu1,
+            R.drawable.menu2,
+            R.drawable.menu3,
+            R.drawable.menu4,
+            R.drawable.menu6
+        )
+        val adapter = PopularAdapter(foodName, price, popularFoodImages)
         binding.popularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.popularRecyclerView.adapter = adapter
     }

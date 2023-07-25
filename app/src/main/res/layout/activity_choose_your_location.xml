@@ -33,19 +33,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="57dp"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        app:boxStrokeWidth="0dp"
-        app:endIconMode="dropdown_menu"
-        app:hintEnabled="false"
-        app:boxStrokeWidthFocused="0dp"
         android:background="@drawable/edittextshape"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:endIconDrawable="@drawable/arrow_circle_down"
+        app:endIconMode="dropdown_menu"
         app:endIconTint="@color/black"
+        app:hintEnabled="false"
         app:layout_constraintTop_toBottomOf="@id/textView5">
 
         <AutoCompleteTextView

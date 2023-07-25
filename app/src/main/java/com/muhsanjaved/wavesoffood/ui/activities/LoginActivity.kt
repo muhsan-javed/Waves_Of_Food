@@ -7,9 +7,11 @@ import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
-    private val binding : ActivityLoginBinding by lazy {
+
+    private val binding: ActivityLoginBinding by lazy {
         ActivityLoginBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)

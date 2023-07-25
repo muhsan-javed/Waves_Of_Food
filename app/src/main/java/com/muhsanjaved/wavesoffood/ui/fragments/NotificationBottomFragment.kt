@@ -1,17 +1,13 @@
 package com.muhsanjaved.wavesoffood.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.muhsanjaved.wavesoffood.R
-import com.muhsanjaved.wavesoffood.adapters.CartAdapter
-import com.muhsanjaved.wavesoffood.adapters.MenuAdapter
 import com.muhsanjaved.wavesoffood.adapters.NotificationAdapter
-import com.muhsanjaved.wavesoffood.databinding.FragmentMenuBottomSheetBinding
 import com.muhsanjaved.wavesoffood.databinding.FragmentNotificationBottomBinding
 
 class NotificationBottomFragment : BottomSheetDialogFragment() {

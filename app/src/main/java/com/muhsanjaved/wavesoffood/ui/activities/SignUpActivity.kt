@@ -8,7 +8,8 @@ import com.muhsanjaved.wavesoffood.databinding.ActivityLoginBinding
 import com.muhsanjaved.wavesoffood.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
-    private val binding : ActivitySignUpBinding by lazy {
+
+    private val binding: ActivitySignUpBinding by lazy {
         ActivitySignUpBinding.inflate(layoutInflater)
     }
 

@@ -49,6 +49,7 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
             )
         val menuPrice =
             listOf("$10", "$8", "$15", "$99", "$50", "$12", "$10", "$8", "$15", "$99", "$50", "$12")
+
         val menuImages = listOf(
             R.drawable.menu1,
             R.drawable.menu2,

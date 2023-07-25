@@ -14,7 +14,9 @@ import com.muhsanjaved.wavesoffood.databinding.FragmentSearchBinding
 
 
 class SearchFragment : Fragment() {
+
     private lateinit var binding: FragmentSearchBinding
+
     private val originalMenuItemFoodName = listOf(
         "Burger",
         "Sandwich",
@@ -31,6 +33,7 @@ class SearchFragment : Fragment() {
     )
     private val originalMenuItemPrice =
         listOf("$10", "$8", "$15", "$99", "$50", "$12", "$10", "$8", "$15", "$99", "$50", "$12")
+
     private val originalMenuImages = listOf(
         R.drawable.menu1,
         R.drawable.menu2,
@@ -45,6 +48,7 @@ class SearchFragment : Fragment() {
         R.drawable.menu6,
         R.drawable.menu2
     )
+
     private lateinit var adapter: MenuAdapter
 
     private val filteredMenuFoodName = mutableListOf<String>()
@@ -62,7 +66,7 @@ class SearchFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-        adapter = MenuAdapter(filteredMenuFoodName,filteredMenuItemPrice,filteredMenuImage)
+        adapter = MenuAdapter(filteredMenuFoodName, filteredMenuItemPrice, filteredMenuImage)
 
         binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.menuRecyclerView.adapter = adapter
@@ -86,7 +90,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun setupSearchView() {
-        binding.searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener,
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             android.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 filterMenuItems(query)
@@ -107,7 +111,7 @@ class SearchFragment : Fragment() {
         filteredMenuImage.clear()
 
         originalMenuItemFoodName.forEachIndexed { index, foodName ->
-            if (foodName.contains(queue,ignoreCase = true)){
+            if (foodName.contains(queue, ignoreCase = true)) {
                 filteredMenuFoodName.add(foodName)
                 filteredMenuItemPrice.add(originalMenuItemPrice[index])
                 filteredMenuImage.add(originalMenuImages[index])

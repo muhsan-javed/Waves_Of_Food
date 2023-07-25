@@ -7,9 +7,11 @@ import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.databinding.ActivityStartBinding
 
 class StartActivity : AppCompatActivity() {
-    private val binding : ActivityStartBinding by lazy {
+
+    private val binding: ActivityStartBinding by lazy {
         ActivityStartBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
