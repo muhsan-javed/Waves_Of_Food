@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CongratsBottomSheetFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:text="Congrats \nYour Order Placed" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="300dp"
+        android:src="@drawable/sucess" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goBackHomeButton"
+        android:layout_width="157dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/greenbuttongradent"
+        android:fontFamily="@font/yeonsung_regular"
+        android:text="Go Home"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/googleSignUpbutton"
+        app:layout_constraintStart_toStartOf="@+id/facebookSignUpButton"
+        app:layout_constraintTop_toBottomOf="@+id/facebookSignUpButton" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            />
+    </LinearLayout>
+
+</FrameLayout>

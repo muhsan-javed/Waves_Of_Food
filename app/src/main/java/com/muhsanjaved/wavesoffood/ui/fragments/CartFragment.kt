@@ -1,5 +1,6 @@
 package com.muhsanjaved.wavesoffood.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.adapters.CartAdapter
 import com.muhsanjaved.wavesoffood.databinding.FragmentCartBinding
+import com.muhsanjaved.wavesoffood.ui.activities.PayoutActivity
 
 class CartFragment : Fragment() {
     private lateinit var binding: FragmentCartBinding
@@ -42,6 +44,12 @@ class CartFragment : Fragment() {
             CartAdapter(ArrayList(cartFoodName), ArrayList(cartPrice), ArrayList(foodImages))
         binding.cartRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.cartRecyclerView.adapter = adapter
+
+        binding.cartProceedButton.setOnClickListener {
+            val intent = Intent(requireContext(), PayoutActivity::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 
