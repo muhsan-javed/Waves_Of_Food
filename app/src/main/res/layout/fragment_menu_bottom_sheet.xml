@@ -22,7 +22,7 @@
         android:layout_margin="8dp"
         android:fontFamily="@font/yeonsung_regular"
         android:gravity="center"
-        android:text="Cart"
+        android:text="Menu"
         android:textColor="@color/black"
         android:textSize="24sp" />
 

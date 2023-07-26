@@ -67,7 +67,8 @@
                 android:ems="10"
                 android:fontFamily="@font/lato_regular"
                 android:hint="Admin"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -101,7 +102,8 @@
                 android:ems="10"
                 android:fontFamily="@font/lato_regular"
                 android:hint="Enables showing a submit button when the query is non-empty. In cases where  be disabled"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,7 +136,8 @@
                 android:ems="10"
                 android:fontFamily="@font/lato_regular"
                 android:hint="123456789"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
