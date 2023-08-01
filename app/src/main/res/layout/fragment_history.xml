@@ -20,11 +20,12 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/yeonsung_regular"
             android:text="Recent buy"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
@@ -51,34 +52,53 @@
                     android:src="@drawable/menu1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/historyOrderedFoodName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:text="Spacy fresj crab"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView"
+                    app:layout_constraintTop_toTopOf="@+id/historyOrderedImageView" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/historyOrderedFoodName"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
                     android:fontFamily="@font/yeonsung_regular"
-                    android:text="Food Name"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@id/historyOrderedFoodName"
-                    app:layout_constraintStart_toEndOf="@id/historyOrderedImageView"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    android:text="Waroenk kita"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/historyOrderedFoodName" />
 
                 <TextView
+                    android:id="@+id/textView21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/historyOrderedFoodName"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/yeonsung_regular"
-                    android:text="Food Name"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@id/historyOrderedFoodName"
-                    app:layout_constraintStart_toEndOf="@id/historyOrderedImageView"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="$35"
+                    android:textColor="@color/textColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/historyOrderedImageView"
+                    app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView" />
 
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ellipse_207"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -86,8 +106,28 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/yeonsung_regular"
+            android:text="Previously buy"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyBuyAgainRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24"
+            app:layout_constraintVertical_bias="0.263" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
