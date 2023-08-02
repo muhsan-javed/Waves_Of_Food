@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.muhsanjaved.wavesoffood.databinding.BuyAgainItemBinding
 
 class BuyAgainAdapter(
-    private val itemFoodName: List<String>,
-    private val itemSellerName: List<String>,
-    private val itemPrice: List<String>,
-    private val itemImage: List<Int>,
+    private val buyAgainFoodName: List<String>,
+    private val buyAgainSellerName: List<String>,
+    private val buyAgainPrice: List<String>,
+    private val buyAgainImage: List<Int>,
 ) : RecyclerView.Adapter<BuyAgainAdapter.BuyAgainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BuyAgainViewHolder {
@@ -18,13 +18,14 @@ class BuyAgainAdapter(
     }
 
     override fun onBindViewHolder(holder: BuyAgainViewHolder, position: Int) {
-        val foodName = itemFoodName[position]
-        val sellerName = itemSellerName[position]
-        val image = itemImage[position]
-        val price = itemPrice[position]
+        val foodName = buyAgainFoodName[position]
+        val sellerName = buyAgainSellerName[position]
+        val image = buyAgainImage[position]
+        val price = buyAgainPrice[position]
+
         holder.bind(foodName, sellerName, image,price)
     }
-    override fun getItemCount(): Int = itemFoodName.size
+    override fun getItemCount(): Int = buyAgainFoodName.size
 
     class BuyAgainViewHolder(private val binding: BuyAgainItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(foodName: String, sellerName: String, image: Int, price: String) {

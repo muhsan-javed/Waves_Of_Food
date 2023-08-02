@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.adapters.BuyAgainAdapter
-import com.muhsanjaved.wavesoffood.adapters.MenuAdapter
 import com.muhsanjaved.wavesoffood.databinding.FragmentHistoryBinding
 
 class HistoryFragment : Fragment() {
@@ -77,13 +76,21 @@ class HistoryFragment : Fragment() {
         )
 
         val adapter =
-            BuyAgainAdapter(ArrayList(historyFoodName), ArrayList(historySellerName), ArrayList(historyPrice),ArrayList(historyImages))
+            BuyAgainAdapter(
+                ArrayList(historyFoodName),
+                ArrayList(historySellerName),
+                ArrayList(historyPrice),
+                ArrayList(historyImages)
+            )
         binding.historyBuyAgainRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.historyBuyAgainRecyclerView.adapter = adapter
 
         return binding.root
     }
 
+    private fun setupRecyclerView(){
+
+    }
     companion object {
 
     }

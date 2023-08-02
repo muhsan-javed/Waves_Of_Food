@@ -27,11 +27,11 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="87dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            app:cardCornerRadius="22dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -88,14 +88,16 @@
                     app:layout_constraintBottom_toBottomOf="@+id/historyOrderedImageView"
                     app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView" />
 
-                <ImageView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/imageView5"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="32dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ellipse_207"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="5dp"
+                    android:background="#4CAF50"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
