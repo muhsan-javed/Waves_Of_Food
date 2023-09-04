@@ -7,7 +7,6 @@
     android:background="@color/white"
     tools:context=".ui.fragments.CartFragment">
 
-
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
         android:background="@drawable/process_button"
         android:fontFamily="@font/yeonsung_regular"
         android:text="Proceed"
-
         android:textAllCaps="false"
         android:textColor="@color/textColor"
         app:layout_constraintBottom_toBottomOf="parent"

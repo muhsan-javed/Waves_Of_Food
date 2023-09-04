@@ -92,16 +92,27 @@
                     android:id="@+id/imageView5"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="8dp"
-                    app:cardCornerRadius="20dp"
-                    android:elevation="5dp"
-                    android:background="#4CAF50"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:backgroundTint="#4CAF50"
+                    app:cardCornerRadius="22dp"
+                    app:layout_constraintBottom_toTopOf="@+id/receivedButton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/receivedButton"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/add_to_cart_shape"
+                    android:fontFamily="@font/yeonsung_regular"
+                    android:text="Received"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

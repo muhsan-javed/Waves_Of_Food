@@ -1,9 +1,11 @@
 package com.muhsanjaved.wavesoffood.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import com.muhsanjaved.wavesoffood.databinding.ActivityChooseYourLocationBinding
+import com.muhsanjaved.wavesoffood.ui.MainActivity
 
 class ChooseYourLocationActivity : AppCompatActivity() {
 
@@ -20,5 +22,9 @@ class ChooseYourLocationActivity : AppCompatActivity() {
         val autoCompleteTextView = binding.listOfLocation
         autoCompleteTextView.setAdapter(adapter)
 
+        binding.textView6.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
