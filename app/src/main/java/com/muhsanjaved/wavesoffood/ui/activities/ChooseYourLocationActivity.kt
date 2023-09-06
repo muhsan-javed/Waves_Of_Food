@@ -22,7 +22,7 @@ class ChooseYourLocationActivity : AppCompatActivity() {
         val autoCompleteTextView = binding.listOfLocation
         autoCompleteTextView.setAdapter(adapter)
 
-        binding.textView6.setOnClickListener {
+        binding.desTextView.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
