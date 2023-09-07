@@ -9,8 +9,8 @@
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/backButton"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
@@ -22,7 +22,7 @@
         android:layout_margin="8dp"
         android:fontFamily="@font/yeonsung_regular"
         android:gravity="center"
-        android:text="Menu"
+        android:text="@string/menu"
         android:textColor="@color/black"
         android:textSize="24sp" />
 

@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="5dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +29,7 @@
                 android:layout_width="62dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/image_desc_text"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/yeonsung_regular"
-                android:text="Cart Food Name"
+                android:text="@string/cart_food_name"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/carItemPriceTextView"
                 app:layout_constraintStart_toEndOf="@+id/cartImageView"
@@ -53,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/lato_regular"
-                android:text="Price"
+                android:text="@string/price"
                 android:textColor="@color/textColor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cartImageView"
@@ -77,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/lato_bold"
-                android:text="1"
+                android:text="@string/_1"
                 app:layout_constraintBottom_toBottomOf="@+id/plusImageButton"
                 app:layout_constraintEnd_toStartOf="@+id/plusImageButton"
                 app:layout_constraintTop_toTopOf="@+id/plusImageButton" />
@@ -105,7 +106,8 @@
                 app:layout_constraintEnd_toEndOf="@+id/plusImageButton"
                 app:layout_constraintStart_toStartOf="@+id/minusImageButton"
                 app:layout_constraintTop_toBottomOf="@+id/quantityTextView"
-                app:srcCompat="@drawable/trash_can" />
+                app:srcCompat="@drawable/trash_can"
+                tools:ignore="SpeakableTextPresentCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

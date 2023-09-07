@@ -7,7 +7,6 @@
     android:background="@color/white"
     tools:context=".ui.fragments.HomeFragment">
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
@@ -50,7 +49,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Popular"
+        android:text="@string/popular"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,8 +64,9 @@
         android:background="@drawable/textviewshape"
         android:elevation="5dp"
         android:gravity="center"
-        android:text="View Menu"
+        android:text="@string/view_menu"
         android:textColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

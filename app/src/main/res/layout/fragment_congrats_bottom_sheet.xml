@@ -21,7 +21,7 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textAlignment="center"
-        android:text="Congrats \nYour Order Placed" />
+        android:text="@string/congrats_nyour_order_placed" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -29,7 +29,8 @@
         android:layout_width="300dp"
         android:layout_marginTop="30dp"
         android:layout_height="300dp"
-        android:src="@drawable/sucess" />
+        android:src="@drawable/sucess"
+        android:contentDescription="@string/image_desc_text" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/goBackHomeButton"
@@ -39,7 +40,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/greenbuttongradent"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Go Home"
+        android:text="@string/go_home"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"

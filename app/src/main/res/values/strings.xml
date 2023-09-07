@@ -25,5 +25,37 @@
     <string name="login">Login</string>
     <string name="don_t_have_account">Don’t Have Account?</string>
     <string name="explore_your_favorite_food">Explore Your Favorite Food</string>
+    <string name="enjoy_restaurant_quality_meals_n_at_home">Enjoy Restaurant Quality Meals \n at Home</string>
+    <string name="next">Next</string>
+    <string name="design_by_n_muhsan_tech">Design By \n Muhsan-Tech</string>
+    <string name="already_have_an_account">Already Have An Account?</string>
+    <string name="name">Name </string>
+    <string name="sign_up_here">Sign Up Here</string>
+    <string name="sign_up_with">Sign Up With</string>
+    <string name="create_account">Create Account</string>
+    <string name="popular">Popular</string>
+    <string name="view_menu">View Menu</string>
+    <string name="cart_food_name">Cart Food Name</string>
+    <string name="price">Price</string>
+    <string name="_1">1</string>
+    <string name="cart">Cart</string>
+    <string name="proceed">Proceed</string>
+    <string name="search">Search</string>
+    <string name="menu">Menu</string>
+    <string name="recent_buy">Recent buy</string>
+    <string name="spacy_crab">Spacy fresj crab</string>
+    <string name="waroenk_kita">Waroenk kita</string>
+    <string name="_35">$35</string>
+    <string name="received">Received</string>
+    <string name="previously_buy">Previously buy</string>
+    <string name="address">Address</string>
+    <string name="address_Dummy">Android is a mobile operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen mobile devices such as smartphones and tablets.</string>
+    <string name="admin_email">admin@gmail.com</string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">0097123456789</string>
+    <string name="save_information">Save Information</string>
+    <string name="go_home">Go Home</string>
+    <string name="congrats_nyour_order_placed">Congrats \nYour Order Placed</string>
+    <string name="notifications">Notifications</string>
 
 </resources>

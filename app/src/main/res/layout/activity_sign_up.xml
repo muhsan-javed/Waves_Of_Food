@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Already Have An Account?"
+        android:text="@string/already_have_an_account"
         android:textColor="@color/textColor"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/signUpButton"
@@ -32,14 +32,16 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/lato_regular"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
-        android:paddingStart="15dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="@+id/textViewSignUPMessage"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/textViewSignUPMessage"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSignUPMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSignUPMessage"
+        android:autofillHints="name" />
 
     <EditText
         android:id="@+id/editTextSignUpTextEmailAddress"
@@ -54,12 +56,14 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/lato_regular"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:paddingStart="15dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextSignUpTextName"
         app:layout_constraintStart_toStartOf="@+id/editTextSignUpTextName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpTextName"
+        android:autofillHints="emailAddress" />
 
     <EditText
         android:id="@+id/editTextSignUpTextPassword"
@@ -74,13 +78,15 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/lato_regular"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
-        android:paddingStart="15dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="@+id/editTextSignUpTextEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/editTextSignUpTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpTextEmailAddress"
+        android:autofillHints="password" />
 
     <TextView
         android:id="@+id/textViewSignUPMessage"
@@ -88,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Sign Up Here"
+        android:text="@string/sign_up_here"
         android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textViewSignUPSubTitle"
@@ -128,7 +134,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/image_desc_text" />
 
     <TextView
         android:id="@+id/textViewSignUpOr"
@@ -136,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Or"
+        android:text="@string/or"
         app:layout_constraintEnd_toEndOf="@+id/editTextSignUpTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextSignUpTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextSignUpTextPassword" />
@@ -147,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Sign Up With"
+        android:text="@string/sign_up_with"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textViewSignUpOr"
         app:layout_constraintStart_toStartOf="@+id/textViewSignUpOr"
@@ -162,7 +169,8 @@
         android:drawableStart="@drawable/google_icon"
         android:fontFamily="@font/lato_bold"
         android:paddingStart="15dp"
-        android:text="Google"
+        android:paddingEnd="1dp"
+        android:text="@string/google"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -178,7 +186,8 @@
         android:drawableStart="@drawable/facebook_icon"
         android:fontFamily="@font/lato_bold"
         android:paddingStart="15dp"
-        android:text="Facebook"
+        android:paddingEnd="1dp"
+        android:text="@string/facebook"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/googleSignUpbutton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -192,7 +201,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/greenbuttongradent"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Create Account"
+        android:text="@string/create_account"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"

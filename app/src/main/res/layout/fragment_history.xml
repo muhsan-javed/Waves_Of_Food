@@ -19,7 +19,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/yeonsung_regular"
-            android:text="Recent buy"
+            android:text="@string/recent_buy"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +52,8 @@
                     android:src="@drawable/menu1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/image_desc_text" />
 
                 <TextView
                     android:id="@+id/historyOrderedFoodName"
@@ -60,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/yeonsung_regular"
-                    android:text="Spacy fresj crab"
+                    android:text="@string/spacy_crab"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView"
@@ -72,7 +73,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/yeonsung_regular"
-                    android:text="Waroenk kita"
+                    android:text="@string/waroenk_kita"
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView"
                     app:layout_constraintTop_toBottomOf="@+id/historyOrderedFoodName" />
@@ -83,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/lato_regular"
-                    android:text="$35"
+                    android:text="@string/_35"
                     android:textColor="@color/textColor"
                     app:layout_constraintBottom_toBottomOf="@+id/historyOrderedImageView"
                     app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView" />
@@ -105,7 +106,7 @@
                     android:layout_height="20dp"
                     android:background="@drawable/add_to_cart_shape"
                     android:fontFamily="@font/yeonsung_regular"
-                    android:text="Received"
+                    android:text="@string/received"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -125,7 +126,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/yeonsung_regular"
-            android:text="Previously buy"
+            android:text="@string/previously_buy"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView4" />

@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backkground_start_1" />
+        app:srcCompat="@drawable/backkground_start_1"
+        android:contentDescription="@string/image_desc_text" />
 
 
     <TextView
@@ -24,10 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/lato_regular"
-        android:text="Enjoy Restaurant Quality Meals \n  at Home"
+        android:text="@string/enjoy_restaurant_quality_meals_n_at_home"
         android:textAlignment="center"
         android:textColor="@color/textColor"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -40,7 +41,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/greenbuttongradent"
         android:fontFamily="@font/lato_bold"
-        android:text="Next"
+        android:text="@string/next"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -56,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text=" Design By \n NeatRoots"
+        android:text="@string/design_by_n_muhsan_tech"
         android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textSize="16sp"

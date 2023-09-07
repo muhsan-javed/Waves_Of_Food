@@ -10,9 +10,9 @@
         android:layout_width="0dp"
         android:layout_height="87dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="5dp"
         android:elevation="4dp"
         app:cardCornerRadius="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,17 +33,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:contentDescription="@string/image_desc_text" />
 
-            <!--  <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="TextView"
-                app:layout_constraintEnd_toEndOf="@+id/textView15"
-                app:layout_constraintStart_toStartOf="@+id/textView15"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
 
             <TextView
                 android:id="@+id/PricePopularItems"
@@ -53,7 +45,7 @@
                 android:layout_marginEnd="40dp"
                 android:fontFamily="@font/lato_regular"
                 android:gravity="center"
-                android:text="$5"
+                android:text="@string/_35"
                 android:textColor="@color/textColor"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/yeonsung_regular"
-                android:text="Food Name"
+                android:text="@string/food_name"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageViewPopularItems"
@@ -83,7 +75,7 @@
                 android:background="@drawable/greenbuttongradent"
                 android:fontFamily="@font/lato_regular"
                 android:gravity="center"
-                android:text="Add To Cart"
+                android:text="@string/add_to_cart"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12sp"
