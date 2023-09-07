@@ -5,5 +5,25 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_your_location">Choose Your Location</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="dummy_text">To provide you with the best dining experience, we need your permission to access your device\'s location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.\"</string>
+    <string name="image_desc_text">this image add best UI or design</string>
+    <string name="food_name">Food Name</string>
+    <string name="short_description">Short Description</string>
+    <string name="short_description_lorem">Short description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="ing_show_berry"><![CDATA[1-> Strowberry\n 2-> Cream\n 3-> wheat]]></string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="login_to_your_account">Login To Your Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or">Or</string>
+    <string name="continue_with">Continue With</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_account">Don’t Have Account?</string>
+    <string name="explore_your_favorite_food">Explore Your Favorite Food</string>
 
 </resources>

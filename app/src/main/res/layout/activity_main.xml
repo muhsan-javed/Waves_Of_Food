@@ -26,7 +26,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Explore Your Favorite Food"
+        android:text="@string/explore_your_favorite_food"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,8 @@
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="@+id/textView11"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/bell" />
+        app:srcCompat="@drawable/bell"
+        android:contentDescription="@string/image_desc_text" />
 
     <fragment
         android:id="@+id/fragmentContainerView"

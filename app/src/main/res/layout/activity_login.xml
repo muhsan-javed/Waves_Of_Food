@@ -7,19 +7,6 @@
     android:background="@color/white"
     tools:context=".ui.activities.LoginActivity">
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/yeonsung_regular"
-        android:text=" Design By \n NeatRoots"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewLoginIcon"
@@ -29,7 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/image_desc_text" />
 
     <TextView
         android:id="@+id/textViewLoginTitle"
@@ -61,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Login To Your  Account"
+        android:text="@string/login_to_your_account"
         android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
@@ -81,13 +69,15 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/lato_regular"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
+        android:paddingEnd="2dp"
         app:layout_constraintEnd_toEndOf="@+id/textViewLogin"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/textViewLogin"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewLogin"
+        android:autofillHints="emailAddress" />
 
     <EditText
         android:id="@+id/editTextLoginTextPassword"
@@ -102,13 +92,15 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/lato_regular"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:paddingStart="15dp"
+        android:paddingEnd="2dp"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="@+id/editTextLoginTextEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/editTextLoginTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoginTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLoginTextEmailAddress"
+        android:autofillHints="password" />
 
     <TextView
         android:id="@+id/textView9"
@@ -116,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Or"
+        android:text="@string/or"
         app:layout_constraintEnd_toEndOf="@+id/editTextLoginTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextLoginTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextLoginTextPassword" />
@@ -127,7 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Continue With"
+        android:text="@string/continue_with"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintStart_toStartOf="@+id/textView9"
@@ -139,10 +131,11 @@
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/whitebutton"
-        android:drawableLeft="@drawable/facebook_icon"
+        android:drawableStart="@drawable/facebook_icon"
         android:fontFamily="@font/lato_bold"
-        android:paddingLeft="15dp"
-        android:text="Facebook"
+        android:paddingStart="15dp"
+        android:paddingEnd="1dp"
+        android:text="@string/facebook"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/googleLoginbutton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -155,10 +148,11 @@
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/whitebutton"
-        android:drawableLeft="@drawable/google_icon"
+        android:drawableStart="@drawable/google_icon"
         android:fontFamily="@font/lato_bold"
-        android:paddingLeft="15dp"
-        android:text="Google"
+        android:paddingStart="15dp"
+        android:paddingEnd="1dp"
+        android:text="@string/google"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -172,7 +166,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/greenbuttongradent"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Login"
+        android:text="@string/login"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -185,7 +179,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Don’t Have Account?"
+        android:text="@string/don_t_have_account"
         android:textColor="@color/textColor"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/loginButton"

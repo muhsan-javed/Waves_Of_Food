@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.activities.DetailsActivity">
 
     <ImageButton
@@ -15,14 +16,15 @@
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_left" />
+        app:srcCompat="@drawable/arrow_left"
+        android:contentDescription="@string/image_desc_text" />
 
     <TextView
         android:id="@+id/detailFoodNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Food Name"
+        android:text="@string/food_name"
         android:textSize="24sp"
         android:textColor="@color/black"
         android:fontFamily="@font/yeonsung_regular"
@@ -48,7 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/image_desc_text" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -57,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Short Description"
+        android:text="@string/short_description"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:fontFamily="@font/yeonsung_regular"
@@ -73,7 +76,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/lato_regular"
         android:textSize="14sp"
-        android:text="Short description  Lorem ipsum dolor sit amet,  consectetur adipiscing elit,  sed do eiusmod tempor incididunt  ut labore et dolore magna aliqua. Ut enim ad "
+        android:text="@string/short_description_lorem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
@@ -83,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Ingredients"
+        android:text="@string/ingredients"
         android:textSize="24sp"
         android:textColor="@color/black"
         android:fontFamily="@font/yeonsung_regular"
@@ -98,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato_regular"
-        android:text=" 1-> Strowberry\n 2-> Cream\n 3-> wheat"
+        android:text="@string/ing_show_berry"
         app:layout_constraintEnd_toEndOf="@+id/textView22"
         app:layout_constraintHorizontal_bias="0.0"
         android:textSize="14sp"
@@ -112,7 +115,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/greenbuttongradent"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Add To Cart"
+        android:text="@string/add_to_cart"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="20sp"

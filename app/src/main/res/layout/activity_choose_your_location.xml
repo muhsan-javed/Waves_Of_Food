@@ -14,18 +14,17 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Choose Your Location "
+        android:text="@string/choose_your_location"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="57dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
         android:background="@drawable/edittextshape"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
@@ -33,7 +32,8 @@
         app:endIconMode="dropdown_menu"
         app:endIconTint="@color/black"
         app:hintEnabled="false"
-        app:layout_constraintTop_toBottomOf="@id/textView5">
+        app:layout_constraintTop_toBottomOf="@id/textView5"
+        tools:layout_editor_absoluteX="16dp">
 
         <AutoCompleteTextView
             android:id="@+id/listOfLocation"
@@ -41,7 +41,8 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/lato_regular"
             android:inputType="none"
-            android:text="Choose Location" />
+            android:text="@string/choose_location"
+            tools:ignore="LabelFor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -49,12 +50,35 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="312dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
         android:fontFamily="@font/lato_regular"
-        android:text="To provide you with the best dining experience, we need your permission to access your device's location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.&quot;"
+        android:text="@string/dummy_text"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.163"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoToMainScreenButton"
+        android:layout_marginBottom="8dp"
+        android:text="GoTo Main Screen"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/greenbuttongradent"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/desTextView"
+        app:layout_constraintStart_toStartOf="@+id/desTextView"
+        app:layout_constraintTop_toBottomOf="@+id/desTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
