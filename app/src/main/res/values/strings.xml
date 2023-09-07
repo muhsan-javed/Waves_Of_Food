@@ -57,5 +57,8 @@
     <string name="go_home">Go Home</string>
     <string name="congrats_nyour_order_placed">Congrats \nYour Order Placed</string>
     <string name="notifications">Notifications</string>
+    <string name="textview">TextView</string>
+    <string name="buy_again">Buy Again</string>
+    <string name="edit">Edit</string>
 
 </resources>

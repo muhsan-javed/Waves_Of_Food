@@ -112,7 +112,7 @@
         android:id="@+id/detailAddToCartButton"
         android:layout_width="326dp"
         android:layout_height="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="42dp"
         android:background="@drawable/greenbuttongradent"
         android:fontFamily="@font/yeonsung_regular"
         android:text="@string/add_to_cart"
