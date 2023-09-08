@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.muhsanjaved.wavesoffood.databinding.CartItemBinding
 
 class CartAdapter(
-    private val CartItems: MutableList<String>, private val CartItemPrice: MutableList<String>,
+    private val CartItems: MutableList<String>,
+    private val CartItemPrice: MutableList<String>,
     private val CartImage: MutableList<Int>
 ) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 

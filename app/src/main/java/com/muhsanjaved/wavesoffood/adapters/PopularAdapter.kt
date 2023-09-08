@@ -12,7 +12,7 @@ class PopularAdapter(
     private val items: List<String>,
     private val price: List<String>,
     private val image: List<Int>,
-    private val requireContext : Context
+    private val requireContext: Context
 ) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -36,7 +36,7 @@ class PopularAdapter(
             // set On Click Listener to Open Details
             val intent = Intent(requireContext, DetailsActivity::class.java)
             intent.putExtra("MenuItemName", item)
-            intent.putExtra("MenuItemImage",images)
+            intent.putExtra("MenuItemImage", images)
             requireContext.startActivity(intent)
         }
     }

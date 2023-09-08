@@ -15,7 +15,7 @@ class MenuAdapter(
     private val menuItemPrice: MutableList<String>,
     private val MenuItemImage: MutableList<Int>,
     private val requireContext: Context,
-    private val itemClickListener : OnClickListener ?= null
+    private val itemClickListener: OnClickListener? = null
 ) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
@@ -38,13 +38,13 @@ class MenuAdapter(
         init {
             binding.root.setOnClickListener {
                 val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION){
+                if (position != RecyclerView.NO_POSITION) {
                     itemClickListener?.onItemClick(position)
                 }
                 // set On Click Listener to Open Details
                 val intent = Intent(requireContext, DetailsActivity::class.java)
                 intent.putExtra("MenuItemName", menuItemsName.get(position))
-                intent.putExtra("MenuItemImage",MenuItemImage.get(position))
+                intent.putExtra("MenuItemImage", MenuItemImage.get(position))
                 requireContext.startActivity(intent)
             }
         }
@@ -60,8 +60,9 @@ class MenuAdapter(
         }
 
     }
+
     interface OnClickListener {
-        fun onItemClick(position: Int){
+        fun onItemClick(position: Int) {
 
         }
     }

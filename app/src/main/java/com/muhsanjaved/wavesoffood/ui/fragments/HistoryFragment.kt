@@ -88,9 +88,10 @@ class HistoryFragment : Fragment() {
         return binding.root
     }
 
-    private fun setupRecyclerView(){
+    private fun setupRecyclerView() {
 
     }
+
     companion object {
 
     }

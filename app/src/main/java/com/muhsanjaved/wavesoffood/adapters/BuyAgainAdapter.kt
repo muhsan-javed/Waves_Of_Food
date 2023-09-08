@@ -13,7 +13,8 @@ class BuyAgainAdapter(
 ) : RecyclerView.Adapter<BuyAgainAdapter.BuyAgainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BuyAgainViewHolder {
-        val binding = BuyAgainItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            BuyAgainItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return BuyAgainViewHolder(binding)
     }
 
@@ -23,11 +24,13 @@ class BuyAgainAdapter(
         val image = buyAgainImage[position]
         val price = buyAgainPrice[position]
 
-        holder.bind(foodName, sellerName, image,price)
+        holder.bind(foodName, sellerName, image, price)
     }
+
     override fun getItemCount(): Int = buyAgainFoodName.size
 
-    class BuyAgainViewHolder(private val binding: BuyAgainItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class BuyAgainViewHolder(private val binding: BuyAgainItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(foodName: String, sellerName: String, image: Int, price: String) {
             binding.buyAgainItemFoodNameTextView.text = foodName
             binding.buyAgainItemSellerNameTextView.text = sellerName
