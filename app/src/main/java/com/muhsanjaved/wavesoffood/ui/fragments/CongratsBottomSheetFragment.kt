@@ -2,14 +2,12 @@ package com.muhsanjaved.wavesoffood.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.databinding.FragmentCongratsBottomSheetBinding
-import com.muhsanjaved.wavesoffood.ui.MainActivity
+import com.muhsanjaved.wavesoffood.ui.activities.MainActivity
 
 class CongratsBottomSheetFragment : BottomSheetDialogFragment() {
 

@@ -3,8 +3,6 @@ package com.muhsanjaved.wavesoffood.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.muhsanjaved.wavesoffood.R
-import com.muhsanjaved.wavesoffood.databinding.ActivityLoginBinding
 import com.muhsanjaved.wavesoffood.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {

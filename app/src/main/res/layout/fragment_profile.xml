@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/name"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/address"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/email"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/phone"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -172,7 +172,7 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/profile_edit_text"
         android:elevation="5dp"
-        android:fontFamily="@font/yeonsung_regular"
+        android:fontFamily="@font/yeon_sung_regular"
         android:text="@string/save_information"
         android:textAllCaps="false"
         android:textColor="@color/textColor"

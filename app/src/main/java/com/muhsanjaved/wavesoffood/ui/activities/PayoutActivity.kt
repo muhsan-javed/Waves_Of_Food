@@ -2,7 +2,6 @@ package com.muhsanjaved.wavesoffood.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.databinding.ActivityPayoutBinding
 import com.muhsanjaved.wavesoffood.ui.fragments.CongratsBottomSheetFragment
 

@@ -60,5 +60,8 @@
     <string name="textview">TextView</string>
     <string name="buy_again">Buy Again</string>
     <string name="edit">Edit</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
 
 </resources>

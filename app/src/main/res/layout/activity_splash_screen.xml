@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.SplashScreen">
+    tools:context=".ui.activities.SplashScreen">
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/yeonsung_regular"
+        android:fontFamily="@font/yeon_sung_regular"
         android:text="@string/waves_of_food"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:fontFamily="@font/yeonsung_regular"
+        android:fontFamily="@font/yeon_sung_regular"
         android:text="@string/design_by_n_muhsan_tech"
         android:textAlignment="center"
         android:textColor="@color/textColor"

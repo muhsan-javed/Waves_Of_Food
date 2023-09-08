@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
@@ -21,7 +22,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
             <ImageView
                 android:id="@+id/buyAgainItem_ImageView"
@@ -42,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/spacy_crab"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -55,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="1dp"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/waroenk_kita"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/buyAgainItem_ImageView"
@@ -83,7 +85,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/greenbuttongradent"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/buy_again"
                 android:textAllCaps="true"
                 android:textColor="@color/white"

@@ -31,7 +31,7 @@
             android:name=".ui.activities.StartActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SplashScreen"
+            android:name=".ui.activities.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
     </application>

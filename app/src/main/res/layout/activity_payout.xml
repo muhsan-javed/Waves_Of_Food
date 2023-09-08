@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/edit"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/yeonsung_regular"
+        android:fontFamily="@font/yeon_sung_regular"
         android:textColor="@color/textColor"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="@string/name"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="Address"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="Phone"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -163,7 +163,7 @@
                 android:layout_height="100dp"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:gravity="center"
                 android:text="Payment Method"
                 android:textAlignment="viewStart"
@@ -195,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/yeonsung_regular"
+                android:fontFamily="@font/yeon_sung_regular"
                 android:text="Total Amount"
                 android:textSize="20sp" />
 
@@ -224,7 +224,7 @@
         android:layout_marginBottom="25dp"
         android:background="@drawable/profile_edit_text"
         android:elevation="5dp"
-        android:fontFamily="@font/yeonsung_regular"
+        android:fontFamily="@font/yeon_sung_regular"
         android:text="Place My Order"
         android:textAllCaps="false"
         android:textColor="@color/textColor"
