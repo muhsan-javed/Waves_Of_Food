@@ -64,4 +64,5 @@
     <string name="history">History</string>
     <string name="profile">Profile</string>
 
+    <string name="default_web_client_Id" translatable="false">732386522808-1umop6dsudtos1ufn45mfn2cqp3ma550.apps.googleusercontent.com</string>
 </resources>
