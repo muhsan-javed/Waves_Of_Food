@@ -1,6 +1,7 @@
 package com.muhsanjaved.wavesoffood.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,19 +11,24 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.muhsanjaved.wavesoffood.R
+import com.muhsanjaved.wavesoffood.adapters.MenuAdapter
 import com.muhsanjaved.wavesoffood.adapters.PopularAdapter
 import com.muhsanjaved.wavesoffood.databinding.FragmentHomeBinding
+import com.muhsanjaved.wavesoffood.models.MenuItem
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-
+    private lateinit var database : FirebaseDatabase
+    private lateinit var menuItems:MutableList<MenuItem>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
     }
 
     override fun onCreateView(
@@ -36,7 +42,49 @@ class HomeFragment : Fragment() {
             val bottomSheetDialog = MenuBottomSheetFragment()
             bottomSheetDialog.show(parentFragmentManager, "Test")
         }
+        retrieveAndDisplayPopularItems()
         return binding.root
+    }
+
+    private fun retrieveAndDisplayPopularItems() {
+        // get reference to the database
+        database = FirebaseDatabase.getInstance()
+        val foodRef : DatabaseReference = database.reference.child("menu")
+        menuItems = mutableListOf()
+
+        // retrieve menu items from the databae
+        foodRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (foodSnapshot in snapshot.children){
+                    val menuItem = foodSnapshot.getValue(MenuItem::class.java)
+                    menuItem?.let {
+                        menuItems.add(it)
+                    }
+                }
+                Log.d("ITEMS", "onDataChange : Data Received")
+                // once data receive set to adapter
+                randomPopularItems()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(requireContext(),"Data Not Fetching",Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    private fun randomPopularItems() {
+        // Create as shuffled list of menu items Auto
+        val index = menuItems.indices.toList().shuffled()
+        val numItemToShow = 6
+        val subsetMenuItems = index.take(numItemToShow).map { menuItems[it] }
+
+        setPupularItemAdapter(subsetMenuItems)
+    }
+
+    private fun setPupularItemAdapter(subsetMenuItems: List<MenuItem>) {
+        val adapter = MenuAdapter(subsetMenuItems, requireContext())
+        binding.popularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.popularRecyclerView.adapter = adapter
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
