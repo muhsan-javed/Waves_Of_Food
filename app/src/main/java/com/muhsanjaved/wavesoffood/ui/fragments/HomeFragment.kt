@@ -111,7 +111,7 @@ class HomeFragment : Fragment() {
             }
         })
 
-        val foodName = listOf("Burger", "Sandwich", "momo", "Herbal Pancake", "Mixing")
+       /* val foodName = listOf("Burger", "Sandwich", "momo", "Herbal Pancake", "Mixing")
 
         val price = listOf("$10", "$8", "$15", "$99", "$50")
 
@@ -124,7 +124,7 @@ class HomeFragment : Fragment() {
         )
         val adapter = PopularAdapter(foodName, price, popularFoodImages, requireContext())
         binding.popularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        binding.popularRecyclerView.adapter = adapter
+        binding.popularRecyclerView.adapter = adapter*/
     }
 
     companion object {
