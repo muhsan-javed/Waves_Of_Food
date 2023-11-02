@@ -18,7 +18,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.adapters.MenuAdapter
-import com.muhsanjaved.wavesoffood.adapters.PopularAdapter
 import com.muhsanjaved.wavesoffood.databinding.FragmentHomeBinding
 import com.muhsanjaved.wavesoffood.models.MenuItem
 
@@ -52,7 +51,7 @@ class HomeFragment : Fragment() {
         val foodRef : DatabaseReference = database.reference.child("menu")
         menuItems = mutableListOf()
 
-        // retrieve menu items from the databae
+        // retrieve menu items from the database
         foodRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 for (foodSnapshot in snapshot.children){
@@ -78,10 +77,10 @@ class HomeFragment : Fragment() {
         val numItemToShow = 6
         val subsetMenuItems = index.take(numItemToShow).map { menuItems[it] }
 
-        setPupularItemAdapter(subsetMenuItems)
+        setPopularItemAdapter(subsetMenuItems)
     }
 
-    private fun setPupularItemAdapter(subsetMenuItems: List<MenuItem>) {
+    private fun setPopularItemAdapter(subsetMenuItems: List<MenuItem>) {
         val adapter = MenuAdapter(subsetMenuItems, requireContext())
         binding.popularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.popularRecyclerView.adapter = adapter
@@ -105,7 +104,7 @@ class HomeFragment : Fragment() {
             }
 
             override fun onItemSelected(position: Int) {
-                val itemPosition = imageList[position]
+                //val itemPosition = imageList[position]
                 val itemMessage = "Selected Image $position"
                 Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
             }
