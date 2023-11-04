@@ -11,18 +11,19 @@ Used Firebase to store restaurant data, Applied MVC pattern design style for cli
 - Admin App Link: https://github.com/muhsan-javed/Admin_Waves_Of_Food
 
 # 🔥 Features: 
+- Facebook and Google authentication integration
+- Push notifications for both mobile and web
 - Analytics dashboard for the mobile app
 - Payment integration with Paypal and Stripe
 - Order tracking feature
-- Email Integration e.g for order confirmation etc.
+- Email Integration e.g. for order confirmation etc.
 - Ability to provide ratings and reviews
-- Finding address using GPS integration
-- Facebook and Google authentication integration
+- Finding addresses using GPS integration
 - Mobile responsive dashboard
-- Multi-Language support using localization
+- Multi-language support using localization
 - Separate rider app for order management
 - Multiple variations of food items
-- Push notifications for both mobile and web
+
 
 # Screenshot 
 
