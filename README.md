@@ -17,7 +17,7 @@ Used Firebase to store restaurant data, Applied MVC pattern design style for cli
 - Analytics dashboard for the mobile app
 - Payment integration with Paypal and Stripe
 - Order tracking feature
-- Email Integration e.g. for order confirmation etc.
+- Email Integration e.g. for order confirmation etc. 
 - Ability to provide ratings and reviews
 - Finding addresses using GPS integration
 - Mobile responsive dashboard
