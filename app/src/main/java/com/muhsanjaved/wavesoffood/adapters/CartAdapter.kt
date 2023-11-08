@@ -57,6 +57,13 @@ class CartAdapter(
 
     override fun getItemCount(): Int = cartItems.size
 
+    // Get upadte quantity
+    fun getUpDatedItemsQuanities(): MutableList<Int> {
+        val itemsQuantity = mutableListOf<Int>()
+        itemsQuantity.addAll(cartItemQuantitys)
+        return itemsQuantity
+    }
+
     inner class CartViewHolder(private val binding: CartItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {
@@ -90,6 +97,7 @@ class CartAdapter(
         private fun deceaseQuantity(position: Int) {
             if (itemQuantities[position] > 1) {
                 itemQuantities[position]--
+                cartItemQuantitys[position] = itemQuantities[position]
                 binding.quantityTextView.text = itemQuantities[position].toString()
             }
         }
@@ -97,6 +105,7 @@ class CartAdapter(
         private fun increaseQuantity(position: Int) {
             if (itemQuantities[position] < 10) {
                 itemQuantities[position]++
+                cartItemQuantitys[position] = itemQuantities[position]
                 binding.quantityTextView.text = itemQuantities[position].toString()
             }
         }
