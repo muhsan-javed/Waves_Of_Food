@@ -38,6 +38,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView19">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recentBuyItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -48,18 +49,19 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/image_desc_text"
                     android:scaleType="centerCrop"
                     android:src="@drawable/menu1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/image_desc_text" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/historyOrderedFoodName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/yeon_sung_regular"
                     android:text="@string/spacy_crab"
                     android:textColor="@color/black"
@@ -67,22 +69,13 @@
                     app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView"
                     app:layout_constraintTop_toTopOf="@+id/historyOrderedImageView" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="2dp"
-                    android:fontFamily="@font/yeon_sung_regular"
-                    android:text="@string/waroenk_kita"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView"
-                    app:layout_constraintTop_toBottomOf="@+id/historyOrderedFoodName" />
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/historyOrderedFoodPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
                     android:fontFamily="@font/lato_regular"
                     android:text="@string/_35"
                     android:textColor="@color/textColor"
@@ -90,7 +83,7 @@
                     app:layout_constraintStart_toEndOf="@+id/historyOrderedImageView" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/historyOrderedStatus"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="32dp"
