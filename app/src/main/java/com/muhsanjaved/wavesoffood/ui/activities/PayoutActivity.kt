@@ -2,6 +2,7 @@ package com.muhsanjaved.wavesoffood.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -9,6 +10,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.muhsanjaved.wavesoffood.databinding.ActivityPayoutBinding
+import com.muhsanjaved.wavesoffood.models.OrderDetails
 import com.muhsanjaved.wavesoffood.ui.fragments.CongratsBottomSheetFragment
 
 class PayoutActivity : AppCompatActivity() {
@@ -56,12 +58,58 @@ class PayoutActivity : AppCompatActivity() {
         binding.payoutTotalAmount.text = totalAmount
 
         binding.placeMyOrderButton.setOnClickListener {
-            val bottomSheetDialog = CongratsBottomSheetFragment()
-            bottomSheetDialog.show(supportFragmentManager,"Test")
+            // get data from Edittext
+            name = binding.payoutName.text.toString().trim()
+            address = binding.payoutAddress.text.toString().trim()
+            phoneNumber = binding.payoutPhoneNumber.text.toString().trim()
+
+            if (name.isBlank() && address.isBlank() && phoneNumber.isBlank()){
+                Toast.makeText(this,"Please Enter all the Details",Toast.LENGTH_SHORT).show()
+            }else {
+                placeTheOrder()
+            }
+
+//            val bottomSheetDialog = CongratsBottomSheetFragment()
+//            bottomSheetDialog.show(supportFragmentManager,"Test")
         }
         binding.payoutBackButton.setOnClickListener {
             finish()
         }
+    }
+
+    private fun placeTheOrder() {
+        userId = auth.currentUser?.uid?:""
+
+        val time = System.currentTimeMillis()
+        val itemPushKey  =databaseReference.child("OrderDetails").push().key
+        val orderDetails = OrderDetails(userId, name, foodItemName,foodItemPrice,foodItemImage,foodItemQuantities,
+            address,totalAmount,phoneNumber,time,itemPushKey, false, false)
+
+        val orderReference = databaseReference.child("OrderDetails").child(itemPushKey!!)
+        orderReference.setValue(orderDetails)
+            .addOnSuccessListener {
+                val bottomSheetDialog = CongratsBottomSheetFragment()
+                bottomSheetDialog.show(supportFragmentManager,"Test")
+                removeItemFromCart()
+                addOrderToHistory(orderDetails)
+
+            }
+            .addOnFailureListener {
+                Toast.makeText(this,"Failed to Order 😒",Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun removeItemFromCart() {
+        val cartItemReference = databaseReference.child("user").child(userId).child("CartItems")
+        cartItemReference.removeValue()
+    }
+
+    private fun addOrderToHistory(orderDetails: OrderDetails) {
+        databaseReference.child("user").child(userId).child("BuyHistory")
+            .child(orderDetails.itemPushKey!!)
+            .setValue(orderDetails).addOnSuccessListener {
+
+            }
     }
 
     private fun calculateTotalAmount(): Int {
