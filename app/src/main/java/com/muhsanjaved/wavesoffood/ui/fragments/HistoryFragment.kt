@@ -19,6 +19,7 @@ import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.adapters.BuyAgainAdapter
 import com.muhsanjaved.wavesoffood.databinding.FragmentHistoryBinding
 import com.muhsanjaved.wavesoffood.models.OrderDetails
+import com.muhsanjaved.wavesoffood.ui.activities.RecentOrderActivity
 
 class HistoryFragment : Fragment() {
 
@@ -49,6 +50,7 @@ class HistoryFragment : Fragment() {
         // Retrieve and  display the user order History
         retrieveBuyHistory()
 
+        // recent buy Button click
         binding.recentBuyItem.setOnClickListener {
             seeItemsRecentBuy()
         }
@@ -56,12 +58,16 @@ class HistoryFragment : Fragment() {
         return binding.root
     }
 
+    // Funcation to see items recent buy
     private fun seeItemsRecentBuy() {
         listOfOrderItem.firstOrNull()?.let { recentBuy->
-            val intent = Intent(requireContext())
+            val intent = Intent(requireContext(), RecentOrderActivity::class.java)
+            intent.putExtra("RecentBuyOrderItem",recentBuy)
+            startActivity(intent)
         }
     }
 
+    // Function to see items  buy history
     private fun retrieveBuyHistory() {
         binding.recentBuyItem.visibility = View.INVISIBLE
         userId = auth.currentUser?.uid?:""
@@ -78,9 +84,12 @@ class HistoryFragment : Fragment() {
                     }
                 }
 
+                //
                 listOfOrderItem.reverse()
                 if (listOfOrderItem.isNotEmpty()){
+                    // DIsplay the most recent order details
                     setDataInRecentBuyItem()
+                    // setup the recyclerView  ithe previuse order details
                     setPreviousBuyItemsRecyclerView()
                 }
             }
@@ -91,6 +100,7 @@ class HistoryFragment : Fragment() {
         })
     }
 
+    // Function to Display the most recent order details
     private fun setDataInRecentBuyItem() {
         binding.recentBuyItem.visibility = View.VISIBLE
         val recentOrderItem = listOfOrderItem.firstOrNull()
@@ -110,6 +120,7 @@ class HistoryFragment : Fragment() {
         }
     }
 
+    // Function to setup the recyclerView  the previous order details
     private fun setPreviousBuyItemsRecyclerView() {
         val buyAgainFoodName = mutableListOf<String>()
         val buyAgainFoodPrice = mutableListOf<String>()
