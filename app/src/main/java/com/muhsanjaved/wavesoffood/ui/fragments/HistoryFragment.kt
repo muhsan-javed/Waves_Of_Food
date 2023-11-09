@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.muhsanjaved.wavesoffood.R
 import com.muhsanjaved.wavesoffood.adapters.BuyAgainAdapter
 import com.muhsanjaved.wavesoffood.databinding.FragmentHistoryBinding
 import com.muhsanjaved.wavesoffood.models.OrderDetails
@@ -28,7 +27,7 @@ class HistoryFragment : Fragment() {
     private lateinit var database : FirebaseDatabase
     private lateinit var auth: FirebaseAuth
     private lateinit var userId:String
-    private var listOfOrderItem:MutableList<OrderDetails> = mutableListOf()
+    private var listOfOrderItem:ArrayList<OrderDetails> = arrayListOf()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,7 +61,7 @@ class HistoryFragment : Fragment() {
     private fun seeItemsRecentBuy() {
         listOfOrderItem.firstOrNull()?.let { recentBuy->
             val intent = Intent(requireContext(), RecentOrderActivity::class.java)
-            intent.putExtra("RecentBuyOrderItem",recentBuy)
+            intent.putExtra("RecentBuyOrderItem",listOfOrderItem)
             startActivity(intent)
         }
     }
