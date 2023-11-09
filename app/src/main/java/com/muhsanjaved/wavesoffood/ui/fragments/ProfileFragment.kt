@@ -32,6 +32,20 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentProfileBinding.inflate(inflater, container, false)
 
+        binding.apply {
+            profileName.isEnabled = false
+            profileEmail.isEnabled = false
+            profileAddress.isEnabled= false
+            profilePhoneNumber.isEnabled = false
+
+            profileEditButton.setOnClickListener {
+                    profileName.isEnabled = !profileName.isEnabled
+                    profileEmail.isEnabled = !profileEmail.isEnabled
+                    profileAddress.isEnabled = !profileAddress.isEnabled
+                    profilePhoneNumber.isEnabled = !profilePhoneNumber.isEnabled
+            }
+        }
+
         setUserData()
         // Svae User Data
         binding.saveUserInformationButton.setOnClickListener {
