@@ -8,6 +8,7 @@ import com.muhsanjaved.wavesoffood.databinding.ActivityRecentOrderBinding
 class RecentOrderActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRecentOrderBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
