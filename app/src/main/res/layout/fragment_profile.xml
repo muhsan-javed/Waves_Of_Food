@@ -18,6 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profileEditButton"
+            android:backgroundTint="@color/textColor"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="57dp"
