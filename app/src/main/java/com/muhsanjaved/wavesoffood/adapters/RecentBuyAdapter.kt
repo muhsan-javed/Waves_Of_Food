@@ -13,7 +13,7 @@ class RecentBuyAdapter(
     private var foodNameList :ArrayList<String>,
     private var foodPriceList :ArrayList<String>,
     private var foodImageList :ArrayList<String>,
-    private var foodQuantityList :ArrayList<String>,
+    private var foodQuantityList :ArrayList<Int>,
 ): RecyclerView.Adapter<RecentBuyAdapter.RecentViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -35,7 +35,7 @@ class RecentBuyAdapter(
             binding.apply {
                 recentFoodName.text = foodNameList[position]
                 recentFoodPrice.text = foodPriceList[position]
-                recentQuantityCountTextView.text = foodQuantityList[position]
+                recentQuantityCountTextView.text = foodQuantityList[position].toString()
                 val uriString = foodImageList[position]
                 val uri = Uri.parse(uriString)
                 Glide.with(context).load(uri).into(recentFoodImage)
