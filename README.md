@@ -27,7 +27,7 @@ Used Firebase to store restaurant data, Applied MVC pattern design style for cli
 
   
 
-# Screenshot 
+# 📷 Screenshot 
 
 <div style="display: flex; flex-direction: row;">
  <img src="https://github.com/muhsan-javed/Waves_Of_Food/assets/67718185/87ad0884-4c14-429f-b2cd-823fcf30b1b5" width="375" height="667">
