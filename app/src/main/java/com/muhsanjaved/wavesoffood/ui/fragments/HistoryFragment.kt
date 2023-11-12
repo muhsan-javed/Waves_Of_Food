@@ -1,6 +1,7 @@
 package com.muhsanjaved.wavesoffood.ui.fragments
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -54,7 +55,17 @@ class HistoryFragment : Fragment() {
             seeItemsRecentBuy()
         }
 //        setupRecyclerView()
+
+        binding.historyFragmentReceivedButton.setOnClickListener {
+            updateOrderStatus()
+        }
         return binding.root
+    }
+
+    private fun updateOrderStatus() {
+        val itemPushKey = listOfOrderItem[0].itemPushKey
+        val completeOrderReference = database.reference.child("CompleteOrder").child(itemPushKey!!)
+        completeOrderReference.child("paymentReceived").setValue(true)
     }
 
     // Funcation to see items recent buy
@@ -111,6 +122,11 @@ class HistoryFragment : Fragment() {
                 val uri  = Uri.parse(image)
                 Glide.with(requireContext()).load(uri).into(historyOrderedImageView)
 
+                val isOrderIsAccepted = listOfOrderItem[0].orderAccepted
+                if (isOrderIsAccepted){
+                    historyOrderedStatus.background.setTint(Color.GREEN)
+                    historyFragmentReceivedButton.visibility = View.VISIBLE
+                }
                 listOfOrderItem.reverse()
                 if (listOfOrderItem.isNotEmpty()){
 
