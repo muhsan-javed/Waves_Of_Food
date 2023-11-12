@@ -96,6 +96,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/historyFragmentReceivedButton"
                     android:layout_width="60dp"
+                    android:visibility="invisible"
                     android:layout_height="20dp"
                     android:background="@drawable/add_to_cart_shape"
                     android:fontFamily="@font/yeon_sung_regular"
