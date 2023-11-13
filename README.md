@@ -1,15 +1,22 @@
-# Waves Of Food Application
+<h1 align="center">
+  Waves Of Food Application
+</h1>
+<p align="start">
+ Food Ordering App with Admin App Firebase
+</p>
 
-Food Ordering App with Admin App Firebase
  
 Used Firebase to store restaurant data, Applied MVC pattern design style for client side & server side.
 
 - Provided sign-in/sign-up function, menu and food list loading, orders management process, and intro sliders for new users.
 
 - As I am a android learner myself, all help & contribution is very well appreciated. If you find this idea or the underlying code useful, feel free to reuse it in your own projects.
-
-- Admin App Link: https://github.com/muhsan-javed/Admin_Waves_Of_Food
-
+  
+<p align="start">
+  <strong>
+    <a href="https://github.com/muhsan-javed/Admin_Waves_Of_Food"> Admin App Link </a>
+  </strong>
+</p>
 
 # 🔥 Features: 
 - Email or Password And Facebook and Google authentication integration
