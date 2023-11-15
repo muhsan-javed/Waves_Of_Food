@@ -2,7 +2,7 @@
   Waves Of Food Application
 </h1>
 <p align="start">
- Food Ordering App with Admin App Firebase
+  Food Ordering App with Admin App Firebase
 </p>
 
  
